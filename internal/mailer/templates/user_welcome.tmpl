@@ -1,0 +1,27 @@
+{{define "subject"}}Welcome{{end}}
+
+{{define "plainBody"}}
+Hello, 
+New user with id: {{.userID}}.
+Activate the user by sending the following JSON to `PUT /v1/users/activated`:
+{"token": "{{.activationToken}}"}
+
+Best Regards
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p>Hello,</p>
+        <p>New user with id: {{.userID}}.</p>
+        <p>Activate the user by sending the following JSON to `PUT /v1/users/activated`:</p>
+        <p>{"token": "{{.activationToken}}"}</p>
+        <p>Best Regards</p>
+    </body>
+</html>
+{{end}}

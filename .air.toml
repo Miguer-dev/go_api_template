@@ -1,0 +1,10 @@
+[build]
+  cmd = "go build -o ./bin/api ./cmd/api/"
+  bin = "./bin/api"
+  dir = "."
+  include_ext = ["go", "html"]
+  exclude_file = ["logs", "tmp"]
+  run_after_build = "chmod +x ./bin/api"
+
+[log]
+  level = "debug"

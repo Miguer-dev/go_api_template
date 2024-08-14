@@ -1,0 +1,28 @@
+# ==================================================================================== #
+# API
+# ==================================================================================== #
+PORT=4000           
+ENV="development"
+
+LIMITER_ENABLED=true
+LIMITER_RPS=2            # Rate limiter requests per second regeneration
+LIMITER_BUCKET=4         # Rate limiter bucket capacity
+
+CORS_SETUP="all"         # all = *, specific = origin white list
+
+# ==================================================================================== #
+# DB 
+# ==================================================================================== #
+DB_DSN="postgres://????"
+DB_MAXOPENCONNS=25       # PostgreSQL max open connections       
+DB_MAXIDLECONNS=25       # PostgreSQL max idle connections
+DB_MAXIDLETIME="15m"     # PostgreSQL max connection idle time
+
+# ==================================================================================== #
+# SMTP 
+# ==================================================================================== #
+SMTP_HOST="????"
+SMTP_PORT=????
+SMTP_USERNAME="????"
+SMTP_PASSWORD="????"
+SMTP_SENDER="????"
